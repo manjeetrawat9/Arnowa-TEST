@@ -29,6 +29,17 @@ from stocks_amazon as ama join
 stocks_apple as app 
 on ama.date_= app.date_
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Question 2. Find the standard deviation of Volume per year for Netflix.
+
+with a as                                                                 #solution no.2
+(select *, extract(year from cast(date_ as date)) as year_ 
+from stocks_netflix)
+select  year_,  
+std(volume) over (partition by year_ order by year_)as std_ 
+from a
+
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Question -- 1. Print the highest opening and the lowest closing values of each month for Google.
