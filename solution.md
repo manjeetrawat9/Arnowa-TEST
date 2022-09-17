@@ -1,5 +1,6 @@
 
-###Qestion --  5. Print the company name with the highest opening value for each day.
+#Qestion --  5. Print the company name with the highest opening value for each day.
+
 
 
 with df as(                                                                                #Solution no. 5 
