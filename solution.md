@@ -1,6 +1,7 @@
 
 ###Qestion --  5. Print the company name with the highest opening value for each day.
 
+
 with df as(                                                                                #Solution no. 5 
 (select date_, open_ ,Company from stocks_netflix) union all
 (select date_, open_,company from stocks_microsoft) union all
